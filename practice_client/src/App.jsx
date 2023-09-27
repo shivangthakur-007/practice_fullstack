@@ -1,12 +1,14 @@
-import './App.css'
-import A from './Components/A'
+import Layouts from './Layouts/Layouts';
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
 
   return (
-     <>
-        <A />  
-     </>
+    <>
+      <Routes>
+         <Route path='/' element={<Layouts />}/>
+      </Routes>
+    </>
   );
 }
 
