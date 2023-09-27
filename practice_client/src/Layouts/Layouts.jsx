@@ -5,7 +5,9 @@ import {
 } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
-import ButtonMenu from "../Components/ButtonMenu";
+import CategoryMenu from "../Components/Categorymenu";
+import BrandsMenu from "../Components/BrandsMenu";
+import StoreMenu from "../Components/Stores";
 
 function Layouts() {
     const img =
@@ -45,16 +47,16 @@ function Layouts() {
         <div>
           <div>
             <a href="/">
-                <ButtonMenu />
+                Home
             </a>
             <a href="/">
-                <ButtonMenu />
+                <CategoryMenu />
             </a>
             <a href="/">
-                <ButtonMenu />
+                <BrandsMenu />
             </a>
             <a href="/">
-                <ButtonMenu />
+                <StoreMenu />
             </a>
           </div>
           <div>
