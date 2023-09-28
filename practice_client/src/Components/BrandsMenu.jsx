@@ -21,9 +21,9 @@ function BrandsMenu() {
   ];
   return (
     <Popover className="relative">
-      <Popover.Button>
-        <span>Brands</span>
-        <AiOutlineDown className="h-5 w-5 " aria-hidden="true" />
+      <Popover.Button className="flex items-end">
+        <span>BRANDS</span>
+        <AiOutlineDown className="h-5 w-4 " aria-hidden="true" />
       </Popover.Button>
       <Transition
         as={Fragment}

@@ -18,10 +18,10 @@ function StoreMenu() {
     { name: "RAJOURI GARDEN STORE"},
   ];
   return (
-    <Popover className="relative">
-      <Popover.Button>
-        <span>Stores</span>
-        <AiOutlineDown className="h-5 w-5 " aria-hidden="true" />
+    <Popover className="relative ">
+      <Popover.Button className="flex items-end">
+        <span>STORES</span>
+        <AiOutlineDown className="h-5 w-4 " aria-hidden="true" />
       </Popover.Button>
       <Transition
         as={Fragment}
