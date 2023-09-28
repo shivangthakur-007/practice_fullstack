@@ -8,10 +8,12 @@ import { CgProfile } from "react-icons/cg";
 import CategoryMenu from "../Components/Categorymenu";
 import BrandsMenu from "../Components/BrandsMenu";
 import StoreMenu from "../Components/Stores";
+import Carousel from "../Components/Carousel";
 
 function Layouts() {
   const img =
     "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
+    const img1="https://www.combonation.in/storage/55399/6501ac9b11108_BYOC_Strip_banner_Sep_DT.jpg"
   return (
     <div className="min-h-[100vh]  font-sans">
       <section className="bg-[#fd7e14] leading-4 p-[2px] max-h-[8vh] flex items-center justify-around">
@@ -43,7 +45,7 @@ function Layouts() {
             <img src={img} width="150px" />
           </a>
         </div>
-        <div className="flex grow-0 basis-[50%] items-center text-[16px] justify-start px-[2rem]  font-[600] text-black">
+        <div className="flex grow-0 basis-[50%] items-center text-[16px] justify-start px-[2rem]  font-[600] text-slate-700">
           <div className="flex gap-[2rem] ">
             <a href="/">Home</a>
             <a href="/">
@@ -57,7 +59,7 @@ function Layouts() {
             </a>
           </div>
         </div>
-        <div className="flex items-end flex-col basis-[25%] justify-center pr-[2rem] font-bold text-black text-lg ">
+        <div className="flex items-end flex-col basis-[25%] justify-center pr-[2rem] font-bold text-slate-700 text-lg ">
           <span>Need Help?</span>
           <span>+918595091624</span>
         </div>
@@ -93,43 +95,71 @@ function Layouts() {
           </a>
         </ul>
       </nav>
-      <div className="carousel rounded-box">
+      <div className="carousel flex gap-[3rem] bg-[#FFF4E3] text-xl text-slate-500 p-[8px] font-semibold">
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>MENS</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>HOME & KITCHEN</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>GIFTS</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>PERSONAL CARE</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>BEAUTY</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>ACCESSORIES</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>BODY CARE</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>FRAGNANCES</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>HAIR CARE</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>MEN GROOMING</span>
+          </a>
         </div>
         <div className="carousel-item">
-          <span>MENS</span>
+          <a href="/">
+            <span>NEW LAUNCH</span>
+          </a>
         </div>
       </div>
+      <section>
+        <div><img src={img1} /></div>
+      </section>
+      <nav>
+        <Carousel />
+      </nav>
     </div>
   );
 }
 
-export default Layouts;
+export default Layouts

@@ -1,12 +1,14 @@
 import Layouts from './Layouts/Layouts';
-import {Route, Routes} from 'react-router-dom'
+import A from './Components/A';
+import {Route, Routes} from 'react-router-dom';
 
 function App() {
 
   return (
     <>
       <Routes>
-         <Route path='/' element={<Layouts />}/>
+         <Route path='/' element={<Layouts />}></Route>
+         {/* <Route path='/' element={<A name={Carousel_Pics} />}/> */}
       </Routes>
     </>
   );
