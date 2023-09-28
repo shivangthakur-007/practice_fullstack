@@ -93,6 +93,41 @@ function Layouts() {
           </a>
         </ul>
       </nav>
+      <div className="carousel rounded-box">
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+        <div className="carousel-item">
+          <span>MENS</span>
+        </div>
+      </div>
     </div>
   );
 }
