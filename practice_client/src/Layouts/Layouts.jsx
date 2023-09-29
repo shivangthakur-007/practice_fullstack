@@ -9,6 +9,8 @@ import CategoryMenu from "../Components/Categorymenu";
 import BrandsMenu from "../Components/BrandsMenu";
 import StoreMenu from "../Components/Stores";
 import Carousel from "../Components/Carousel";
+import CardCarousel from "../Components/CardCarousel";
+import Card from "../Components/Card";
 
 function Layouts() {
   const img =
@@ -168,6 +170,11 @@ function Layouts() {
       <div>
         <img src={img2} alt="new" />
       </div>
+      <section>
+        <div className="carousel rounded-box">
+          <div className="carousel-item"><Card /></div>
+        </div>
+      </section>
     </div>
   );
 }
