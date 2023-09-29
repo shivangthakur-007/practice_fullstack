@@ -10,6 +10,7 @@ function Card() {
   const cardImg =
     "https://www.combonation.in/storage/56549/650eb75e35b2d_Combo-220.jpg";
   return (
+    <div className="flex w-full h-[100vh] items-center justify-center ">
       <div className="w-[17rem] h-[27rem] border-slate-300 border-2 flex flex-col absolute ">
         <div className="flex justify-end pr-[10px] py-[4px]">
           <AiOutlineHeart className="text-[25px] text-slate-700 hover:text-red-500 " />
@@ -50,6 +51,7 @@ function Card() {
             </button>
           </div>
         </div>
+      </div>
       </div>
   );
 }

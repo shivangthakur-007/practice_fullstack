@@ -10,7 +10,6 @@ import BrandsMenu from "../Components/BrandsMenu";
 import StoreMenu from "../Components/Stores";
 import Carousel from "../Components/Carousel";
 import CardCarousel from "../Components/CardCarousel";
-import Card from "../Components/Card";
 
 function Layouts() {
   const img =
@@ -69,7 +68,7 @@ function Layouts() {
           <span>+918595091624</span>
         </div>
       </header>
-      <div className="sticky top-0 left-0 bg-white w-full py-[3px]">
+      <div className="sticky top-0 left-0 z-10 bg-white w-full py-[3px]">
         <nav className="flex flex-wrap pb-[0.5rem] ml-[7rem] mr-[5rem]   ">
           <div className="flex grow-0 basis-[25%] "></div>
           <div className="flex grow-0 basis-[50%] pl-[1rem]">
@@ -170,10 +169,8 @@ function Layouts() {
       <div>
         <img src={img2} alt="new" />
       </div>
-      <section>
-        <div className="carousel rounded-box">
-          <div className="carousel-item"><Card /></div>
-        </div>
+      <section className="z-0">
+        <CardCarousel />
       </section>
     </div>
   );
