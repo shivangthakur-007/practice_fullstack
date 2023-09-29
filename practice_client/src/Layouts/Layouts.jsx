@@ -3,6 +3,7 @@ import {
   BsFillQuestionCircleFill,
   BsBag,
 } from "react-icons/bs";
+import { IoNotificationsCircleOutline } from "react-icons/io5";
 import { AiOutlineHeart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import CategoryMenu from "../Components/Categorymenu";
@@ -34,7 +35,10 @@ function Layouts() {
                 Get App
               </li>
             </a>
-            <a href="/" className="text-lg font-semibold text-white pl-4">
+            <a
+              href="/"
+              className="text-lg font-semibold text-white pl-4 relative"
+            >
               <li className="flex items-center gap-1">
                 <BsFillQuestionCircleFill />
                 Help
@@ -42,8 +46,13 @@ function Layouts() {
             </a>
           </ul>
         </div>
+        <div className=" fixed top-[35rem] left-[79rem] border-box z-20">
+          <a href="/">
+            <IoNotificationsCircleOutline className="text-[4rem] text-red-600 p-[2px]" />
+          </a>
+        </div>
       </section>
-      <header className="flex flex-wrap max-w-[100%] mx-[7rem] relative">
+      <header className="flex flex-wrap max-w-[100%] mx-[7rem] relative z-40">
         <div className="flex  items-center grow-0 basis-[25%] justify-start">
           <a href="/">
             <img src={img} width="150px" />
