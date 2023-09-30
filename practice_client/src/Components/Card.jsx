@@ -6,6 +6,7 @@ function Card() {
   function handledclick() {
     setState(state + 1);
   }
+  
 
   const cardImg =
     "https://www.combonation.in/storage/56549/650eb75e35b2d_Combo-220.jpg";

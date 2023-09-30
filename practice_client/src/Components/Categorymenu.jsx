@@ -1,20 +1,26 @@
 import { Popover, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
+import axios from "axios";
 
-const img =
-  "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
+// const img =
+//   "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
+
 function CategoryMenu() {
-  const btn = [
-    { name: "Baby Care", pic: img },
-    { name: "Beauty", pic: img },
-    { name: "Gifts", pic: img },
-    { name: "Health & Wellness", pic: img },
-    { name: "Home & Kitchen", pic: img },
-    { name: "Personal Care", pic: img },
-    { name: "New Launch", pic: img },
-    { name: "Wedding", pic: img },
-  ];
+  const [category, setCategory] = useState([]);
+  async function CategoryChild() {
+    try {
+      let response = await axios.get(
+        `https://fakestoreapi.com/products/categories`
+      );
+      setCategory(response.data);
+    } catch (error) {
+      console.log(error, "Something went wrong");
+    }
+  }
+  useEffect(() => {
+    CategoryChild();
+  }, []);
   return (
     <Popover className="relative">
       <Popover.Button className="flex items-end gap-[2px]">
@@ -31,21 +37,21 @@ function CategoryMenu() {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div className="p-4 flex ">
-              {btn.map((item) => (
-                <div>
-                  <ul>
-                    <li className="font-semibold text-gray-900">
-                      {item.name}
-                    </li>
-                      <a href="/">
-                        <img src={item.pic} width="120px" />
-                      </a>
-                  </ul>
-                </div>
-              ))}
-            </div>
+          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white leading-6 shadow-lg ring-1 ring-gray-900/5">
+            <ul className="flex items-center justify-center text-lg gap-2">
+              <a href="/">
+                <li>{category[0]}</li>
+              </a>
+              <a href="/">
+                <li>{category[1]}</li>
+              </a>
+              <a href="/">
+                <li>{category[2]}</li>
+              </a>
+              <a href="/">
+                <li>{category[3]}</li>
+              </a>
+            </ul>
           </div>
         </Popover.Panel>
       </Transition>

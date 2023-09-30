@@ -32,17 +32,14 @@ function StoreMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div className="p-4 flex ">
+        <Popover.Panel className="absolute left-50% z-10 mt-5 flex  w-screen max-w-max -translate-x-1/2 px-2">
+          <div className="w-4/12 max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+            <div className="py-4 px-3 gap-1 flex flex-col items-start ">
               {btn.map((item) => (
                 <div>
                   <ul>
                     <li className="font-semibold text-gray-900">
                       {item.name}
-                      <a href="/">
-                        <img src={item.pic} width="120px" />
-                      </a>
                     </li>
                   </ul>
                 </div>
