@@ -1,18 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import { Bio } from "../App";
 
 function Card() {
-  const [state, setState] = useState(0);
-  function handledclick() {
-    setState(state + 1);
-  }
-  
-
+  const head=useContext(Bio)
   const cardImg =
     "https://www.combonation.in/storage/56549/650eb75e35b2d_Combo-220.jpg";
   return (
     <div className="flex w-full h-[80vh] items-center justify-center ">
-      <div className="w-[17rem] h-[27rem] border-slate-300 border-2 flex flex-col absolute ">
+      <div className="w-[17rem] h-[27.3rem] border-slate-300 border-2 flex flex-col absolute ">
         <div className="flex justify-end pr-[10px] py-[4px] bg-red-50">
           <AiOutlineHeart className="text-[25px] text-slate-700 hover:text-red-500  " />
         </div>
@@ -30,25 +26,18 @@ function Card() {
             <span>66%off</span>
           </div>
         </div>
-        <div className="items-center flex justify-center gap-[2rem] pt-[0.6rem] ">
+        <div className="items-center flex justify-center pt-[0.6rem] ">
           <div>
             <button
-              onClick={handledclick}
-              className="flex items-center py-[1px] px-[1px] w-[140px] rounded-md border-2 border-yellow-500 hover:bg-yellow-600 "
+              onClick={head.handledclick}
+              className="flex items-center py-[2px] px-[10px] w-[180px] rounded-md border-2 border-yellow-500 hover:bg-yellow-500 hover:border-transparent "
             >
-              <div className="flex items-center gap-2">
-                <AiOutlineShoppingCart className="flex text-2xl text-gray-700 " />
-                <span className="text-gray-600 px-[2px] py-[1px] text-lg font-semibold">
+              <div className="flex items-center gap-4 text-xl">
+                <AiOutlineShoppingCart className="flex text-3xl text-gray-700 " />
+                <span className="text-gray-600 px-[2px] py-[1px] font-semibold">
                   Add to cart
                 </span>
               </div>
-            </button>
-          </div>
-          <div className="">
-            <button className="flex bg-tranparent  items-center justify-center  border-[2px] border-slate-400 rounded-3xl w-[30px] h-[28px] cursor-pointer hover:border-blue-800 ">
-              <span className="text-xl hover:text-slate-500 text-blue-600">
-                {state}
-              </span>
             </button>
           </div>
         </div>
