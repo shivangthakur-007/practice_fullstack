@@ -4,23 +4,19 @@ import {
   BsBag,
 } from "react-icons/bs";
 import { IoNotificationsCircleOutline } from "react-icons/io5";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { AiOutlineHeart } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
-import CategoryMenu from "../Components/Categorymenu";
-import BrandsMenu from "../Components/BrandsMenu";
-import StoreMenu from "../Components/Stores";
-import Carousel from "../Components/Carousel";
-import CardCarousel from "../Components/CardCarousel";
+import CategoryMenu from "../Categorymenu";
+import BrandsMenu from "../BrandsMenu";
+import StoreMenu from "../Stores";
 
-function Layouts() {
-  const img =
-    "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
-  const img1 =
-    "https://www.combonation.in/storage/55399/6501ac9b11108_BYOC_Strip_banner_Sep_DT.jpg";
-  const img2 =
-    "https://www.combonation.in/storage/56834/6512dbb29b553_MKQ_banner_DT_oct.jpg";
+function Electronic() {
+    const img =
+      "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
+
   return (
-    <div className="min-h-[100vh]  font-sans">
+    <div className="bg-white">
       <section className="bg-[#fd7e14] leading-4 p-[2px] max-h-[8vh] flex items-center justify-around">
         <div className="w-[50%] pl-[2rem] py-2">
           <a href="/" className="text-lg font-semibold text-white">
@@ -77,7 +73,7 @@ function Layouts() {
           <span>+918595091624</span>
         </div>
       </header>
-      <div className="sticky top-0 left-0 z-10 bg-white w-full py-[3px]">
+      <div className="sticky top-0 left-0 z-30 bg-white w-full py-[3px]">
         <nav className="flex flex-wrap pb-[0.5rem] ml-[7rem] mr-[5rem]   ">
           <div className="flex grow-0 basis-[25%] "></div>
           <div className="flex grow-0 basis-[50%] pl-[1rem]">
@@ -110,79 +106,53 @@ function Layouts() {
           </ul>
         </nav>
       </div>
-      <div className="carousel flex gap-[3rem] bg-[#FFF4E3] text-xl text-slate-500 p-[8px] font-semibold">
-        <div className="carousel-item">
-          <a href="/">
-            <span>MENS</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>HOME & KITCHEN</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>GIFTS</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>PERSONAL CARE</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>BEAUTY</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>ACCESSORIES</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>BODY CARE</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>FRAGNANCES</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>HAIR CARE</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>MEN GROOMING</span>
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="/">
-            <span>NEW LAUNCH</span>
-          </a>
+      <div className=" bg-[#f8f8f85e] z-0">
+        <div className="border-box flex flex-col shadow-[0_1px_4px_rgba(0,0,0,0.16)]  w-[18vw] h-[60vh]">
+          <div className="flex flex-col basis-[40%]">
+            <div className="border-b-[1px] border-gray-300 bg-[#f8f8f85e]  py-[0.2rem] pl-[0.4rem]">
+              <span className="text-[20px] text-gray-600 font-[600]">
+                Sort By:
+              </span>
+            </div>
+            <div className="bg-white flex flex-col px-[2rem] py-[1rem] z-40">
+              <li className="text-gray-800">
+                <a href="/" className="text-gray-400 font-semibold text-[18px]">
+                  Name
+                </a>
+              </li>
+              <li className="text-gray-800">
+                <a href="/" className="text-gray-400 font-semibold text-[18px]">
+                  Category
+                </a>
+              </li>
+              <li className="text-gray-800">
+                <a href="/" className="text-gray-400 font-semibold text-[18px]">
+                  MRP
+                </a>
+              </li>
+            </div>
+          </div>
+          <div className="flex flex-col basis-[10%] border-b-[1px] border-gray-300 bg-[#f8f8f85e] py-[0.2rem] pl-[0.4rem]">
+            <span className="text-[20px] text-gray-600 font-[600]">
+              Filter By
+            </span>
+          </div>
+          <ul className="flex flex-col gap-3 basis-[50%] justify-center w-full items-center bg-white">
+            <li className="flex gap-7 px-[2rem] text-[20px] font-semibold items-center">
+              Subcategories{" "}
+              <ChevronDownIcon className="w-[17%] text-gray-600" />
+            </li>
+            <li className="flex gap-7 px-[2rem] text-[20px] font-semibold">
+              Brands <ChevronDownIcon className="w-[17%] text-gray-600" />
+            </li>
+            <li className="flex gap-7 px-[2rem] text-[20px] font-semibold ">
+              Price <ChevronDownIcon className="w-[17%] text-gray-600" />
+            </li>
+          </ul>
         </div>
       </div>
-      <section>
-        <div>
-          <img src={img1} />
-        </div>
-      </section>
-      <nav>
-        <Carousel />
-      </nav>
-      <div>
-        <img src={img2} alt="new" />
-      </div>
-      <section className="z-0">
-        <CardCarousel />
-      </section>
+
     </div>
   );
 }
-
-export default Layouts;
+export default Electronic;

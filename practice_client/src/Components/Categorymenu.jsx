@@ -39,7 +39,7 @@ function CategoryMenu() {
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
           <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white leading-6 shadow-lg ring-1 ring-gray-900/5">
             <ul className="flex items-center justify-center text-lg gap-2">
-              <a href="/">
+              <a href="/electronic">
                 <li>{category[0]}</li>
               </a>
               <a href="/">
