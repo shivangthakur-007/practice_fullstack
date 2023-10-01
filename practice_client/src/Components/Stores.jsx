@@ -35,10 +35,10 @@ function StoreMenu() {
         <Popover.Panel className="absolute left-50% z-10 mt-5 flex  w-screen max-w-max -translate-x-1/2 px-2">
           <div className="w-4/12 max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div className="py-4 px-3 gap-1 flex flex-col items-start ">
-              {btn.map((item) => (
+              {btn.map((item, index) => (
                 <div>
                   <ul>
-                    <li className="font-semibold text-gray-900">
+                    <li key={index} className="font-semibold text-gray-900">
                       {item.name}
                     </li>
                   </ul>

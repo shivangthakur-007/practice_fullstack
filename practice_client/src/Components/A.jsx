@@ -9,8 +9,9 @@ const img = {
   img3: "https://www.combonation.in/storage/56834/6512dbb29b553_MKQ_banner_DT_oct.jpg",
   img4: "https://www.combonation.in/storage/55406/6503f10e5e302_buy--Recovered-RecoveredArtboard-1-copy-6.jpg",
 };
+const fruits=['Apple', 'Garlic', 'fish', 'rixol', 'citol'];
   return (
-    <Bio.Provider value={img}>
+    <Bio.Provider value={fruits}>
       <B />
     </Bio.Provider>
   );

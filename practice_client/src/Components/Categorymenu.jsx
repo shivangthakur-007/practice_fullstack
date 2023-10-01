@@ -18,9 +18,9 @@ function CategoryMenu() {
       console.log(error, "Something went wrong");
     }
   }
-  useEffect(() => {
-    CategoryChild();
-  }, []);
+  // useEffect(() => {
+  // }, []);
+  CategoryChild();
   return (
     <Popover className="relative">
       <Popover.Button className="flex items-end gap-[2px]">
@@ -37,20 +37,13 @@ function CategoryMenu() {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white leading-6 shadow-lg ring-1 ring-gray-900/5">
+          <div className="flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white leading-6 shadow-lg ring-1 ring-gray-900/5">
             <ul className="flex items-center justify-center text-lg gap-2">
-              <a href="/electronic">
-                <li>{category[0]}</li>
-              </a>
-              <a href="/">
-                <li>{category[1]}</li>
-              </a>
-              <a href="/">
-                <li>{category[2]}</li>
-              </a>
-              <a href="/">
-                <li>{category[3]}</li>
-              </a>
+              {category.map((items, index) => (
+                <a href="/electronic">
+                  <li key={index}>{items}</li>
+                </a>
+              ))}
             </ul>
           </div>
         </Popover.Panel>
