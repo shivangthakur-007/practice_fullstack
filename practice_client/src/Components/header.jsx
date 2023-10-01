@@ -9,12 +9,9 @@ import { CgProfile } from "react-icons/cg";
 import CategoryMenu from "../Components/Categorymenu";
 import BrandsMenu from "../Components/BrandsMenu";
 import StoreMenu from "../Components/Stores";
-import { useContext } from "react";
-import { Bio } from "../App";
 
 
-function Header() {
-const head=useContext(Bio)    
+function Header() {   
   const img =
     "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
   return (
@@ -106,7 +103,7 @@ const head=useContext(Bio)
                 <div className="">
                   <button className="flex bg-tranparent  items-center justify-center  border-[2px] border-slate-400 rounded-3xl w-[30px] h-[28px] cursor-pointer hover:border-blue-800 ">
                     <span className="text-xl hover:text-slate-500 text-blue-600">
-                      {head.state}
+                      {/* {head.state} */}
                     </span>
                   </button>
                 </div>

@@ -1,9 +1,6 @@
-import { useContext } from "react";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
-import { Bio } from "../App";
 
 function Card() {
-  const head=useContext(Bio)
   const cardImg =
     "https://www.combonation.in/storage/56549/650eb75e35b2d_Combo-220.jpg";
   return (
@@ -29,7 +26,7 @@ function Card() {
         <div className="items-center flex justify-center pt-[0.6rem] ">
           <div>
             <button
-              onClick={head.handledclick}
+              // onClick=""
               className="flex items-center py-[2px] px-[10px] w-[180px] rounded-md border-2 border-yellow-500 hover:bg-yellow-500 hover:border-transparent "
             >
               <div className="flex items-center gap-4 text-xl">
