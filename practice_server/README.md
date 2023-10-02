@@ -1,0 +1,2 @@
+# Node.js
+- Node is a open source, server-side javascript run time environment, that allows a developer to run javascript code on the server. Node.js is built on chrome v8 javascript engine and uses an event driven, non-blocking i/o, which makes it well - suited  for building scalalble and high -performance network applications. 

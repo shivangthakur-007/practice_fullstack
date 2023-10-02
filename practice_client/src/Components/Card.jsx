@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import axios from "axios";
 
@@ -9,20 +9,23 @@ function Card() {
   }
   const [carditem, SetCardItem] = useState({});
   async function Cardresponse() {
+  const id=2;
     try {
-      const response = await axios.get(`https://fakestoreapi.com/products/1`);
-      // console.log(response)
+      const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
       SetCardItem({
         name: response.data.title,
         id: response.data.id,
         img: response.data.image,
         price: response.data.price,
       });
+      // console.log(response.data)
     } catch (e) {
       console.log(e, "error not responded");
     }
   }
-  Cardresponse();
+  useEffect(()=>{
+    Cardresponse();
+  })
 
   // console.log(carditem.img)
   return (

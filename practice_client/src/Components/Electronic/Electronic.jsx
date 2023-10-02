@@ -1,21 +1,29 @@
-import {
-  BsFillPhoneFill,
-  BsFillQuestionCircleFill,
-  BsBag,
-} from "react-icons/bs";
-import { IoNotificationsCircleOutline } from "react-icons/io5";
+
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { AiOutlineHeart } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
-import CategoryMenu from "../Categorymenu";
-import BrandsMenu from "../BrandsMenu";
-import StoreMenu from "../Stores";
 import Card from "../Card";
 import Header from "../header";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Electronic() {
-    
     const img1="https://www.combonation.in/storage/5869/63981b089f0b1_Baby-Care.png";
+    const [carditem, SetCardItem] = useState({});
+    async function Cardresponse() {
+      try {
+        const response = await axios.get(
+          `https://fakestoreapi.com/products`
+        );
+        SetCardItem(
+          response.data,
+      );
+      } catch (e) {
+        console.log(e, "error not responded");
+      }
+    }
+    useEffect(()=>{
+      Cardresponse()
+    }, [])
+    // console.log((carditem[0]).id,)
   return (
     <div className="bg-white">
       <Header />
@@ -101,8 +109,9 @@ function Electronic() {
           <div className="border-b-[1px] border-gray-600 text-4xl py-[0.5rem] text-black font-semibold ">
             <h1>Precurated Combo</h1>
           </div>
-          <div className="flex flex-wrap">
-            <div className="flex w-[100%]">
+           {carditem.map(()=>{
+          <div className="flex flex-wrap gap-10 py-[2rem]">
+           <div className="flex w-[100%] gap-4">
               <Card />
               <Card />
               <Card />
@@ -128,6 +137,7 @@ function Electronic() {
               <Card />
             </div>
           </div>
+            })} 
         </nav>
       </section>
     </div>
