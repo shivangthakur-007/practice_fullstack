@@ -1,29 +1,13 @@
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Card from "../Card";
-import Header from "../header";
+import Card from "../Card/Card";
+import Header from "../Components/header";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import CardNumber from "../Card/CardNumber";
 
 function Electronic() {
     const img1="https://www.combonation.in/storage/5869/63981b089f0b1_Baby-Care.png";
-    const [carditem, SetCardItem] = useState({});
-    async function Cardresponse() {
-      try {
-        const response = await axios.get(
-          `https://fakestoreapi.com/products`
-        );
-        SetCardItem(
-          response.data,
-      );
-      } catch (e) {
-        console.log(e, "error not responded");
-      }
-    }
-    useEffect(()=>{
-      Cardresponse()
-    }, [])
-    // console.log((carditem[0]).id,)
   return (
     <div className="bg-white">
       <Header />
@@ -109,35 +93,9 @@ function Electronic() {
           <div className="border-b-[1px] border-gray-600 text-4xl py-[0.5rem] text-black font-semibold ">
             <h1>Precurated Combo</h1>
           </div>
-           {carditem.map(()=>{
-          <div className="flex flex-wrap gap-10 py-[2rem]">
-           <div className="flex w-[100%] gap-4">
-              <Card />
-              <Card />
-              <Card />
-            </div>
-            <div className="flex w-[100%]">
-              <Card />
-              <Card />
-              <Card />
-            </div>
-            <div className="flex w-[100%]">
-              <Card />
-              <Card />
-              <Card />
-            </div>
-            <div className="flex w-[100%]">
-              <Card />
-              <Card />
-              <Card />
-            </div>
-            <div className="flex w-[100%]">
-              <Card />
-              <Card />
-              <Card />
-            </div>
-          </div>
-            })} 
+          <>
+            <CardNumber />
+          </>
         </nav>
       </section>
     </div>

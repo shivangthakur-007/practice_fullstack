@@ -1,11 +1,8 @@
 import Carousel from "../Components/Carousel";
-import CardCarousel from "../Components/CardCarousel";
 import Header from "../Components/header";
-import { useContext } from "react";
-import { Bios } from "../App";
+// import CardCarousel from "../Components/CardCarousel";
 
 function Layouts(){
-  const head=useContext(Bios);
   return (
     <div className="min-h-[100vh]  font-sans">
       <Header />
@@ -26,14 +23,14 @@ function Layouts(){
       </div>
       <section>
         <div>
-          <img src={head.img2} />
+          <img src={''} />
         </div>
       </section>
       <nav>
         <Carousel />
       </nav>
       <div>
-        <img src={head.img3} alt="new" />
+        <img src={''} alt="new" />
       </div>
       <div className="z-0">
         <div className="py-[1rem]">
@@ -41,14 +38,14 @@ function Layouts(){
         </div>
         <div>
           <div>
-            <img src={head.img4} />
-            <img src={head.img4} />
+            <img src={''} />
+            <img src={''} />
           </div>
           <div></div>
         </div>
       </div>
       <section className="z-0">
-        <CardCarousel />
+        {/* <CardCarousel /> */}
       </section>
     </div>
   );
