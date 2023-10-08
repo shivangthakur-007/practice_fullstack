@@ -32,3 +32,4 @@ Microservices
 Node.js is a powerful and versatile platform that can be used to develop a wide variety of applications. It is a popular choice for developers who are looking for a lightweight, efficient, and scalable runtime environment.
 
 If you are interested in learning more about Node.js, there are many resources available online. There are also many tutorials and courses that can teach you how to develop Node.js applications.
+In Node.js, a module is a self-contained JavaScript file that encapsulates a specific set of functionality. Modules in Node.js serve as building blocks for organizing and structuring code in your applications. They enable code reuse, maintainability, and separation of concerns by allowing you to break your application into smaller, manageable pieces.

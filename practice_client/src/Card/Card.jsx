@@ -6,7 +6,6 @@ function Card({ data }) {
   function handledclick() {
     setState(state + 1);
   }
-//   console.log(data);
 
   return (
     <div className="bg-white my-[2rem] flex flex-col border-[1px] border-gray-500 w-[16.4rem] min-h-[31.5rem] gap-2 pb-2">
