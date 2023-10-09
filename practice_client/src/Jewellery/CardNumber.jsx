@@ -25,8 +25,8 @@ function JewelleryCards() {
     <div className="flex max-w-[100%] flex-wrap gap-[16px]  justify-center items-center ">
       {data.map((e, i) => {
         return (
-          <div>
-            <Card data={e} key={i} />
+          <div key={i}>
+            <Card data={e} />
           </div>
         );
       })}

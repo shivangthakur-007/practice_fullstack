@@ -10,8 +10,7 @@ import CategoryMenu from "../Components/Categorymenu";
 import BrandsMenu from "../Components/BrandsMenu";
 import StoreMenu from "../Components/Stores";
 
-
-function Header() {   
+function Header() {
   const img =
     "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
   return (
@@ -76,9 +75,9 @@ function Header() {
         <nav className="flex flex-wrap pb-[0.5rem] ml-[7rem] mr-[5rem]   ">
           <div className="flex grow-0 basis-[25%] "></div>
           <div className="flex grow-0 basis-[50%] pl-[1rem]">
-            <div className="box-border w-[100%] border-none rounded-md  mr-[2rem] ">
+            <div className="box-border w-[100%] border-[1px] border-gray-600 rounded-md  mr-[2rem] ">
               <input
-                className="bg-transparent rounded-md  w-[100%]   py-[0.3rem] px-[1rem] text-lg font-semibold"
+                className="bg-transparent rounded-md w-[100%] py-[0.3rem] pr-[1rem] pl-[2px] text-lg font-semibold"
                 type="search"
                 name="search_box"
                 id="search_box"
@@ -100,13 +99,13 @@ function Header() {
             <a href="/">
               <li>
                 <BsBag className="w-[40px] h-[30px] hover:text-yellow-500" />
-                <div className="">
+                {/* <div className="">
                   <button className="flex bg-tranparent  items-center justify-center  border-[2px] border-slate-400 rounded-3xl w-[30px] h-[28px] cursor-pointer hover:border-blue-800 ">
                     <span className="text-xl hover:text-slate-500 text-blue-600">
-                      {/* {head.state} */}
+                      {head.state}
                     </span>
                   </button>
-                </div>
+                </div> */}
               </li>
             </a>
           </ul>

@@ -7,6 +7,7 @@ function Men() {
     <div>
       <Header />
       <MensCard />
+      <Footer />
     </div>
   )
 }

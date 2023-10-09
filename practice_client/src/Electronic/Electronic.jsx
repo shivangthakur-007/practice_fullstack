@@ -2,6 +2,7 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Header from "../Components/header";
 import ElectronicCards from "./CardNumber";
+import Footer from "../footer";
 
 function Electronic() {
     const img1="https://www.combonation.in/storage/5869/63981b089f0b1_Baby-Care.png";
@@ -95,6 +96,7 @@ function Electronic() {
           </nav>
         </nav>
       </section>
+      <Footer/>
     </div>
   );
 }

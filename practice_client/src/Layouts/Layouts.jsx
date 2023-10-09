@@ -1,6 +1,7 @@
 import Carousel from "../Components/Carousel";
 import { useContext } from "react";
 import Header from "../Components/header";
+import Footer from "../footer";
 
 function Layouts() {
   const img = {
@@ -52,6 +53,7 @@ function Layouts() {
       <section className="z-0">
         {/* <CardCarousel /> */}
       </section>
+      <Footer />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 
 function CategoryMenu() {
   const [fake, setfake]= useState([]);
@@ -34,20 +35,20 @@ let card=Object.values(fake);
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-          <div className="flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <ul className="flex items-center justify-center text-lg gap-2">
-              <a href="/electronics">
-               <li>{card[0]}</li>
-              </a> 
-              <a href="/jewellery">
-               <li>{card[1]}</li>
-              </a> 
-              <a href="/men">
-               <li>{card[2]}</li>
-              </a> 
-              <a href="/women">
-               <li>{card[3]}</li>
-              </a> 
+          <div className="bg-white shadow-[0px_0px_16px_rgba(17,17,26,0.1)] rounded-xl px-2 py-3">
+            <ul className="flex text-md text-gray-500 gap-2">
+              <Link to="/electronics">
+                <li>{card[0]}</li>
+              </Link>
+              <Link to="/jewelery">
+                <li>{card[1]}</li>
+              </Link>
+              <Link to="/men">
+                <li>{card[2]}</li>
+              </Link>
+              <Link to="/women">
+                <li>{card[3]}</li>
+              </Link>
             </ul>
           </div>
         </Popover.Panel>
