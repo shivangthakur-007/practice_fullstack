@@ -1,10 +1,10 @@
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Card from "../Card/Card";
+import Card from "../Components/Card";
 import Header from "../Components/header";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CardNumber from "../Card/CardNumber";
+import CardNumber from "../Components/CardNumber";
 
 function Electronic() {
     const img1="https://www.combonation.in/storage/5869/63981b089f0b1_Baby-Care.png";
