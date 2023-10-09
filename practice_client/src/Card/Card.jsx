@@ -13,9 +13,9 @@ function Card({ data }) {
         <AiOutlineHeart className="text-2xl hover:text-red-500" />
       </div>
       <div className=" flex items-center justify-center border-b-[1px] border-gray-400 pb-2 basis-5/12">
-        <img src={data.image} className="h-[14.5rem] w-[11.5rem]" />
+        <img src={data.image} className="h-[12.5rem] w-[11.5rem]" />
       </div>
-      <div className="flex flex-col items-center basis-5/12 min-h-[7rem]">
+      <div className="flex flex-col items-center basis-5/12 min-h-[8rem]">
         <div className="flex flex-col items-center">
           <h1 className="flex text-center justify-center text-md">
             {data.title}
@@ -31,10 +31,10 @@ function Card({ data }) {
         </div>
       </div>
       <div className="flex items-center gap-6 justify-center  basis-1/12 pr-[3px] pl-[3px]">
-        <div className="border-yellow-500 border-[2px] hover:border-white box-border hover:bg-yellow-600 py-1 px-3 rounded-lg flex items-center border-box ">
+        <div className="border-yellow-500 border-[2px] hover:border-white box-border hover:bg-yellow-600 py-[0.5px] px-1 rounded-lg flex items-center border-box ">
           <button onClick={handledclick} className="">
             <div className="flex items-center gap-2 text-yellow-500 font-semibold hover:text-white">
-              <AiOutlineShoppingCart className="text-3xl " />
+              <AiOutlineShoppingCart className="text-2xl " />
               <span className=" text-xl">Add to cart</span>
             </div>
           </button>

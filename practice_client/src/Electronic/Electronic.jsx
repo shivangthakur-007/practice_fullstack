@@ -1,10 +1,7 @@
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Card from "../Components/Card";
 import Header from "../Components/header";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import CardNumber from "../Components/CardNumber";
+import ElectronicCards from "./CardNumber";
 
 function Electronic() {
     const img1="https://www.combonation.in/storage/5869/63981b089f0b1_Baby-Care.png";
@@ -94,7 +91,7 @@ function Electronic() {
             <h1>Precurated Combo</h1>
           </div>
           <nav >
-            <CardNumber />
+            <ElectronicCards />
           </nav>
         </nav>
       </section>

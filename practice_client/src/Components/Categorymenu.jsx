@@ -4,7 +4,7 @@ import { AiOutlineDown } from "react-icons/ai";
 import axios from "axios";
 
 function CategoryMenu() {
-  const [fake, setfake]= useState();
+  const [fake, setfake]= useState([]);
   async function fakecategories(){
     try {
     const response =await axios.get("https://fakestoreapi.com/products/categories");
@@ -15,9 +15,9 @@ function CategoryMenu() {
   }
 useEffect(()=>{
   fakecategories();
-},[])
-  
-  // console.log(fake, typeof(fake))
+},[]);
+
+let card=Object.values(fake);
   return (
     <Popover className="relative">
       <Popover.Button className="flex items-end gap-[2px]">
@@ -36,8 +36,17 @@ useEffect(()=>{
         <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
           <div className="flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white leading-6 shadow-lg ring-1 ring-gray-900/5">
             <ul className="flex items-center justify-center text-lg gap-2">
-              <a href="/electronic">
-                <li>{fake}</li>
+              <a href="/electronics">
+               <li>{card[0]}</li>
+              </a> 
+              <a href="/jewellery">
+               <li>{card[1]}</li>
+              </a> 
+              <a href="/men">
+               <li>{card[2]}</li>
+              </a> 
+              <a href="/women">
+               <li>{card[3]}</li>
               </a> 
             </ul>
           </div>
