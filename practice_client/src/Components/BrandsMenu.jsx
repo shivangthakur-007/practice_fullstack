@@ -38,9 +38,9 @@ function BrandsMenu() {
           <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div className="p-4 flex ">
               {btn.map((item, index) => (
-                <div>
+                <div key={index}>
                   <a href="/">
-                    <img key={index} src={item.pic} width="200px" />
+                    <img src={item.pic} width="200px" />
                   </a>
                 </div>
               ))}

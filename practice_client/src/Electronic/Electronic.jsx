@@ -93,9 +93,9 @@ function Electronic() {
           <div className="border-b-[1px] border-gray-600 text-4xl py-[0.5rem] text-black font-semibold ">
             <h1>Precurated Combo</h1>
           </div>
-          <>
+          <nav >
             <CardNumber />
-          </>
+          </nav>
         </nav>
       </section>
     </div>

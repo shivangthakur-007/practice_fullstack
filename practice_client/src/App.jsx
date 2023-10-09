@@ -9,7 +9,7 @@ function App() {
   return (
         <Routes>
           <Route path='/' element={<Layouts />}></Route>
-          {/* <Route path='/electronic' element={<Electronic />}></Route> */}
+          <Route path='/electronic' element={<Electronic />}></Route>
           {/* <Route path="/" element={<A />} /> */}
         </Routes>
   );
