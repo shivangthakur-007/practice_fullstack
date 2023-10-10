@@ -1,9 +1,12 @@
 import {config} from 'dotenv';
 config();
 import app from "./app.js";
+import connectionToDB from './Config/dbConnection.js';
 
-const PORT = process.env.PORT || 500
+const PORT = process.env.PORT || 5014;
+
 app.listen(PORT, async()=>{
-    console.log(`Post is running at https://localhost:${PORT}`)
+    await connectionToDB();
+    console.log(`Port is running at https://localhost:${PORT}`)
 })
 
