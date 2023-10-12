@@ -21,7 +21,7 @@ function BrandsMenu() {
   ];
   return (
     <Popover className="relative">
-      <Popover.Button className="flex items-end">
+      <Popover.Button className="flex items-end outline-none">
         <span>BRANDS</span>
         <AiOutlineDown className="h-5 w-4 " aria-hidden="true" />
       </Popover.Button>

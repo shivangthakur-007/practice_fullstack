@@ -6,18 +6,20 @@ import Jewellery from './Jewellery/Jewellery';
 import Men from './Men\'s Clothing/Men\'s';
 import Women from './Women\'s Clothing/Women\'s';
 import Footer from './footer';
+import StoreNav from './Components/storeNav';
 
 function App() {
    
   return (
         <Routes>
-          {/* <Route path='/' element={<Layouts />}></Route>
+          <Route path='/' element={<Layouts />}></Route>
           <Route path='/electronics' element={<Electronic />}></Route>
           <Route path='/jewelery' element={<Jewellery />}></Route>
           <Route path='/men' element={<Men />}></Route>
           <Route path='/women' element={<Women />}></Route>
-          <Route path='' element={<Footer />}></Route> */}
-          <Route path="/" element={<A />} />
+          <Route path='' element={<Footer />}></Route>
+          <Route path='/storenav' element={<StoreNav />}></Route>
+          {/* <Route path="/" element={<A />} /> */}
         </Routes>
   );
 }

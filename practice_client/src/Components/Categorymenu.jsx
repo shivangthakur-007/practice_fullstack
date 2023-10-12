@@ -20,8 +20,8 @@ useEffect(()=>{
 
 let card=Object.values(fake);
   return (
-    <Popover className="relative">
-      <Popover.Button className="flex items-end gap-[2px]">
+    <Popover className="relative ">
+      <Popover.Button className="flex items-end gap-[2px] outline-none">
         <span>CATEGORIES</span>
         <AiOutlineDown className="h-5 w-4 " aria-hidden="true" />
       </Popover.Button>

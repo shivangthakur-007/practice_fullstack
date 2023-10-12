@@ -8,7 +8,7 @@ function Card({ data }) {
   }
 
   return (
-    <div className="bg-white my-[2rem] flex flex-col border-[1px] border-gray-500 w-[14.4rem] min-h-[27.5rem] gap-2 pb-2">
+    <div className="bg-white my-[2rem] flex flex-col border-[1px] border-gray-500 w-[15.9rem] min-h-[28.5rem] gap-2 pb-2">
       <div className="flex items-center justify-end pr-[6px] pt-[4px] basis-1/12">
         <AiOutlineHeart className="text-2xl hover:text-red-500" />
       </div>

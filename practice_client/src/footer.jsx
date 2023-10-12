@@ -1,8 +1,11 @@
 import React from "react";
 import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
 import { FiHeadphones } from "react-icons/fi";
-import { LiaGreaterThanSolid } from "react-icons/lia";
-import {PiCopyrightLight} from "react-icons/pi";
+import { LiaAngleDoubleRightSolid, LiaGreaterThanSolid } from "react-icons/lia";
+import { PiCaretDoubleRightFill, PiCopyrightLight } from "react-icons/pi";
+import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { ChevronDoubleRightIcon, ChevronDownIcon, GlobeAltIcon } from "@heroicons/react/20/solid";
 
 function Footer() {
   return (
@@ -81,45 +84,48 @@ function Footer() {
           </ul>
           <ul className="flex flex-col gap-2">
             <h1 className="text-white">KEEP IN TOUCH</h1>
-            <div className="text-[16.5px] text-gray-200 gap-2 font-xl flex">
-              <input type="email" placeholder="Your email" />
+            <div className="text-[16.5px] text-gray-200 font-xl flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                className="text-[#ccc] px-2 rounded-l-[4px] border-transparent outline-none"
+              />
               <button>
-                <LiaGreaterThanSolid />
-                <LiaGreaterThanSolid />
+                <LiaAngleDoubleRightSolid className="w-[40px] h-[35px] bg-[#FE9E2D] rounded-[5px] rounded-l-none text-white" />
               </button>
             </div>
             <div>
-              <h1>Follow us</h1>
-              <li>
-                <a href="">
-                  <img src="" alt="" />
-                </a>
-                <a href="">
-                  <img src="" alt="" />
-                </a>
-                <a href="">
-                  <img src="" alt="" />
-                </a>
+              <h1 className="text-white pb-1 text-lg">Follow us</h1>
+              <li className="flex gap-7">
+                <BsFacebook className="text-blue-500  text-4xl cursor-pointer" />
+                <BsInstagram className="text-pink-500 bg-gradient-to-b cursor-pointer from-pink-300 to-yellow-500 rounded-xl text-4xl" />
+                <BsLinkedin className="text-blue-500 text-4xl cursor-pointer" />
               </li>
             </div>
           </ul>
         </div>
       </div>
-      <div className="flex basis-[40%] mx-[6rem] py-[1.5rem]">
-        <div className="flex items-center basis-[50%]">
-          <button>
-            <span>English</span>
-          </button>
-          <button>
-            <span>Indian Rupees</span>
-          </button>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+      <div className="flex basis-[40%] mx-[6rem] pt-[1.5rem]">
+        <div className="flex basis-[50%] gap-2">
+          <select className="bg-slate-800 leading-6 text-[#ccc] px-[1px] pl-1 rounded-sm py-[1.5px] h-[30px] pr-1 cursor-pointer outline-none">
+            <option className="flex gap-2">
+              English <GlobeAltIcon className="w-[20px] contrast-[200]" />
+            </option>
+          </select>
+          <select className="bg-slate-800 leading-6 text-[#ccc] px-[1px] pl-1 rounded-sm py-[1.5px] h-[30px] cursor-pointer outline-none">
+            <option className="flex gap-2">
+              Indian Rupees{" "}
+              <ChevronDownIcon className="w-[20px] contrast-[200]" />
+            </option>
+          </select>
+          <img
+            src="https://www.combonation.in/assets/img/cards_all.svg"
+            alt=""
+            className="h-[30px] w-[200px] cursor-pointer"
+          />
         </div>
-        <div className="flex flex-col basis-[50%] text-[19px] font-bold text-gray-200">
-          <div>
+        <div className="flex flex-col basis-[50%] text-[19px] font-bold text-gray-300">
+          <div className="flex gap-2">
             <a href="/">Terms and conditions</a>
             <span>|</span>
             <a href="/">Privacy Policy</a>
@@ -127,7 +133,7 @@ function Footer() {
             <a href="/">Returns and Refunds</a>
             <span>|</span>
           </div>
-          <div className="flex gap-2 text-[18px] font-semibold text-gray-200">
+          <div className="flex gap-2 text-[18px] font-semibold text-gray-400">
             <PiCopyrightLight className="" />
             <p>
               2021-23 Combonation.in. Powered by Born Unicorn Tech Prise Pvt.

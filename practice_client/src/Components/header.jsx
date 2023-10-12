@@ -77,7 +77,7 @@ function Header() {
           <div className="flex grow-0 basis-[50%] pl-[1rem]">
             <div className="box-border w-[100%] border-[1px] border-gray-600 rounded-md  mr-[2rem] ">
               <input
-                className="bg-transparent rounded-md w-[100%] py-[0.3rem] pr-[1rem] pl-[2px] text-lg font-semibold"
+                className="bg-transparent rounded-md w-[100%] py-[0.3rem] pr-[1rem] pl-[2px] text-lg font-semibold outline-none"
                 type="search"
                 name="search_box"
                 id="search_box"
