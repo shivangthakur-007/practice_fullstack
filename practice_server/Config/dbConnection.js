@@ -6,7 +6,7 @@ const connectionToDB = async () => {
   try {
     const { connection } = await mongoose.connect(
       process.env.MONGO_URI ||
-        `mongodb+srv://thakurshivang579:57575751@cluster0.aj8hrur.mongodb.net/Collection`
+        `mongodb+srv://thakurshivang579:<57575751>@cluster0.aj8hrur.mongodb.net`
     );
     if (connection) {
       console.log(`Connected to db: ${connection.host}`);

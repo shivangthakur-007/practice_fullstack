@@ -13,10 +13,15 @@ app.use(cors({
     credentials: true
 }))
 
-app.use('/', (req, res)=>{
+app.use('/ping', (req, res)=>{
     res.send('/pong');
 })
 app.use('/api/vi/user', router);
+
+
+app.all("*", (req, res) => {
+  res.status(404).send("OOPS!! Page not found");
+});
 
 app.use(morgan('dev'));
 

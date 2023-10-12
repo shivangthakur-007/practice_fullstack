@@ -1,8 +1,8 @@
 import { Router } from "express";
-import bodyParser from "../Controllers/bodyParser.js";
+import { register } from "../Controllers/bodyParser.js";
 
 const router= Router();
 
-router.post('/about', bodyParser);
+router.post('/register', register);
 
 export default router;
