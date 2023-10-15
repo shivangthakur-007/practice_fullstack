@@ -1,10 +1,18 @@
 import A from "./A";
 
-function B({message, children}) {
-
+function B() {
+  function onchageColor(){
+      let bodyStyle= document.body.style;
+      if(bodyStyle.backgroundColor === 'black'){
+        bodyStyle.backgroundColor = 'white';
+      }
+      else{
+        bodyStyle.backgroundColor = 'black';
+      }
+  }
   return (
     <>
-    <button onClick={()=> alert(message)}>{children}</button>
+      <A a={onchageColor}/>
     </>
   );
   }

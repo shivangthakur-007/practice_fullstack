@@ -89,6 +89,8 @@ function Footer() {
                 type="email"
                 placeholder="Your email"
                 className="text-[#ccc] px-2 rounded-l-[4px] border-transparent outline-none"
+                id="keep"
+                name="Keep in touch"
               />
               <button>
                 <LiaAngleDoubleRightSolid className="w-[40px] h-[35px] bg-[#FE9E2D] rounded-[5px] rounded-l-none text-white" />
@@ -107,17 +109,18 @@ function Footer() {
       </div>
       <div className="flex basis-[40%] mx-[6rem] pt-[1.5rem]">
         <div className="flex basis-[50%] gap-2">
-          <select className="bg-slate-800 leading-6 text-[#ccc] px-[1px] pl-1 rounded-sm py-[1.5px] h-[30px] pr-1 cursor-pointer outline-none">
-            <option className="flex gap-2">
-              English <GlobeAltIcon className="w-[20px] contrast-[200]" />
+          <select id="language" name="language" className=" flex gap-2 leading-6 text-[#ccc] px-[1px] pl-1 rounded-sm py-[1.5px] h-[30px] pr-1 cursor-pointer outline-none">
+            <option className="" value="English">
+              English
             </option>
           </select>
-          <select className="bg-slate-800 leading-6 text-[#ccc] px-[1px] pl-1 rounded-sm py-[1.5px] h-[30px] cursor-pointer outline-none">
-            <option className="flex gap-2">
+            <GlobeAltIcon className="w-[20px] contrast-[200]" />
+          <select id="currency" name="currency" className=" flex gap-2 leading-6 text-[#ccc] px-[1px] pl-1 rounded-sm py-[1.5px] h-[30px] cursor-pointer outline-none">
+            <option className="" value="Indian Rupees">
               Indian Rupees{" "}
-              <ChevronDownIcon className="w-[20px] contrast-[200]" />
             </option>
           </select>
+            <ChevronDownIcon className="w-[20px] contrast-[200]" />
           <img
             src="https://www.combonation.in/assets/img/cards_all.svg"
             alt=""

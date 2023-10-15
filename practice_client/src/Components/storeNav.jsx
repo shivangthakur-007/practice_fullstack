@@ -1,8 +1,11 @@
 import React from "react";
 import Header from "./header";
 import Footer from "../footer";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import { useNavigate } from "react-router-dom";
 
 function StoreNav() {
+  const navigator = useNavigate('/');
   return (
     <div>
       <Header />
@@ -14,8 +17,11 @@ function StoreNav() {
           <div>
             <img src="" alt="" />
           </div>
-          <div>
-            <h1></h1>
+          <div className="flex flex-col">
+            <h1 className="flex items-center">
+              View Photo Gallery{" "}
+              <ArrowRightIcon className="w-[22px] h-[18px] " />
+            </h1>
             <div>
               <img src="" alt="" />
               <img src="" alt="" />
@@ -25,7 +31,10 @@ function StoreNav() {
               <img src="" alt="" />
             </div>
             <div>
-              <h1></h1>
+              <h1>
+                Store Address : Lower Ground 4, Madan Mohan Malviya Road,
+                Amritsar
+              </h1>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7385383.345770013!2d76.831238!3d25.3329414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3978738a56576cd3%3A0x83a98eed49abb30c!2sBundelkhand!5e0!3m2!1sen!2sin!4v1697132841816!5m2!1sen!2sin"
                 width="600"

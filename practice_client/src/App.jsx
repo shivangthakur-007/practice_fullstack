@@ -7,6 +7,7 @@ import Men from './Men\'s Clothing/Men\'s';
 import Women from './Women\'s Clothing/Women\'s';
 import Footer from './footer';
 import StoreNav from './Components/storeNav';
+import B from './Components/B';
 
 function App() {
    
@@ -17,7 +18,6 @@ function App() {
           <Route path='/jewelery' element={<Jewellery />}></Route>
           <Route path='/men' element={<Men />}></Route>
           <Route path='/women' element={<Women />}></Route>
-          <Route path='' element={<Footer />}></Route>
           <Route path='/storenav' element={<StoreNav />}></Route>
           {/* <Route path="/" element={<A />} /> */}
         </Routes>
