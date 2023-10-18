@@ -1,10 +1,11 @@
 import { Router } from "express";
 import { createStore, getAllStores } from "../Controllers/store.js";
+import upload from "../middleware/multer.middleware.js";
 
-const router= Router();
+const router = Router();
 
-router.get('/get', getAllStores);
-router.post('/post', createStore);
+router.route("/get").get(upload.single("GalleryImages"), getAllStores);
+
+router.route("/post").post(createStore);
 
 export default router;
-

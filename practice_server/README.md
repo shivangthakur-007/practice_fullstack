@@ -38,3 +38,36 @@ In Node.js, a module is a self-contained JavaScript file that encapsulates a spe
 - it's router which provide a url where your existing code available.
 - route.use('/', userroute)=> here userroute is a code which is available on '/';
 - 
+ # Body-parser
+ - 
+Body-parser is a Node.js middleware that parses the incoming request bodies in a middleware before you handle it. It is useful for parsing JSON, buffer, string and URL encoded data submitted using HTTP POST request.
+
+Without body-parser, you would have to manually parse the request body in your code. This can be time-consuming and error-prone, especially if the request body is complex.
+
+Body-parser makes it easy to parse the request body by providing a number of middleware functions that can be used to parse different types of data. For example, the following middleware function parses JSON request bodies:
+
+JavaScript
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+Use code with caution. Learn more
+Once this middleware function is registered, you can access the parsed JSON data in your code using the req.body object. For example, the following code prints the name property of the parsed JSON object to the console:
+
+JavaScript
+app.post('/users', (req, res) => {
+  const name = req.body.name;
+
+  console.log('User created:', name);
+
+  res.send('User created successfully');
+});
+Use code with caution. Learn more
+Body-parser is a popular Node.js middleware that is used by many developers to parse request bodies. It is easy to use and can save you a lot of time and effort.
+
+Here are some of the benefits of using body-parser in Node.js applications:
+
+It makes it easy to parse request bodies, even if they are complex.
+It supports a variety of data formats, including JSON, buffer, string, and URL encoded data.
+It is easy to use and can be configured to meet your specific needs.
+It is well-tested and reliable.
+If you are developing Node.js applications that need to parse request bodies, I recommend using body-parser. It is a powerful and easy-to-use middleware that can save you a lot of time and effort.
