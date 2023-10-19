@@ -31,12 +31,7 @@ const createStore = async (req, res, next) => {
         secure_url: "dummy",
       },
     });
-    console.log(store)
-    const storeExists = await Store.findOne({ name });
 
-    // if (storeExists) {
-    //   return next(new appError("Store already Exists", 404));
-    // }
     if (!store) {
       return next(new appError("Could not be created, Please try again", 403));
     }
@@ -48,14 +43,14 @@ const createStore = async (req, res, next) => {
         const result = await cloudinary.v2.uploader.upload(req.file.path, {
           folder: "new",
         });
+        // console.log(result, 'hello')
 
         if (result) {
           store.galleryImages.public_id = result.public_id;
           store.galleryImages.secure_url = result.secure_url;
         }
-        // console.log('second result', JSON.stringify(result));
-        fs.rm(`uploads/${req.file.filename}`);
         // delete the file
+        fs.rm(`uploads/${req.file.filename}`);
       } catch (e) {
         return next(new appError(e.message, 404));
       }

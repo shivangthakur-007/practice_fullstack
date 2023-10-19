@@ -4,8 +4,7 @@ import upload from "../middleware/multer.middleware.js";
 
 const router = Router();
 
-router.route("/get").get(upload.single("GalleryImages"), getAllStores);
-
-router.route("/post").post(createStore);
+router.get("/get", getAllStores);
+router.post("/post", upload.single("galleryImages"), createStore);
 
 export default router;

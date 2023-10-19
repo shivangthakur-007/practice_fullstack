@@ -9,7 +9,7 @@ const storeSchema = new Schema(
       maxLength: [60, "name is not more than 20 required"],
       trim: true
     },
-    
+
     addresses: {
       type: String,
       required: [false, "address is required"],
@@ -20,11 +20,11 @@ const storeSchema = new Schema(
     galleryImages: {
       public_id: {
         type: String,
-        required: true,
+        required: false,
       },                                                  
       secure_url: {
         type: String,
-        required: true,
+        required: false,
       },
     },
   },
