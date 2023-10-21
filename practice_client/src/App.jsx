@@ -17,7 +17,7 @@ function App() {
           <Route path='/electronics' element={<Electronic />}></Route>
           <Route path='/jewelery' element={<Jewellery />}></Route>
           <Route path='/men' element={<Men />}></Route>
-          <Route path='/women' element={<Women />}></Route>
+          <Route path='/women' element={<Women />}></Route>     
           <Route path='/storenav' element={<StoreNav />}></Route>
           {/* <Route path="/" element={<A />} /> */}
         </Routes>

@@ -1,23 +1,27 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { AiOutlineDown } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
 import {Link} from 'react-router-dom';
 
 const img =
   "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
 function StoreMenu() {
-  const btn = [
-    { name: "AIRIA MALL STORE"},
-    { name: "AKSHARDHAM STORE"},
-    { name: "AMRITSAR STORE"},
-    { name: "DWARKA STORE"},
-    { name: "FARIDABAD STORE"},
-    { name: "GK M BLOCK"},
-    { name: "KANPUR STORE"},
-    { name: "LAJPAT NAGAR"},
-    { name: "MGF METROPOLITAN STORE"},
-    { name: "RAJOURI GARDEN STORE"},
-  ];
+  const dispatch= useDispatch();
+  const btn = useSelector((state)=> state?.stores?.data);
+  console.log(btn?.name)
+  // const btn = [
+  //   { name: "AIRIA MALL STORE"},
+  //   { name: "AKSHARDHAM STORE"},
+  //   { name: "AMRITSAR STORE"},
+  //   { name: "DWARKA STORE"},
+  //   { name: "FARIDABAD STORE"},
+  //   { name: "GK M BLOCK"},
+  //   { name: "KANPUR STORE"},
+  //   { name: "LAJPAT NAGAR"},
+  //   { name: "MGF METROPOLITAN STORE"},
+  //   { name: "RAJOURI GARDEN STORE"},
+  // ];
   return (
     <Popover className="relative ">
       <Popover.Button className="flex items-end outline-none">
@@ -36,7 +40,7 @@ function StoreMenu() {
         <Popover.Panel className="absolute left-50% z-10 mt-5 flex  w-screen max-w-max -translate-x-1/2 px-2">
           <div className="w-4/12 max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div className="py-4 px-3 gap-1 flex flex-col items-start ">
-              {btn.map((item, index) => (
+              {/* {btn.map((item, index) => (
                 <button key={index}>
                   <ul>
                     <Link to={"/storenav"}>
@@ -46,7 +50,8 @@ function StoreMenu() {
                     </Link>
                   </ul>
                 </button>
-              ))}
+              ))} */}
+              <li>{btn?.name}</li>
             </div>
           </div>
         </Popover.Panel>
