@@ -26,24 +26,23 @@ const createStore = async (req, res, next) => {
     const store = await Store.create({
       name,
       addresses,
-      galleryImages: {
-        public_id: "dummy",
-        secure_url: "dummy",
-      },
+      // galleryImages: {
+      //   public_id: "dummy",
+      //   secure_url: "dummy",
+      // },
     });
 
     if (!store) {
       return next(new appError("Could not be created, Please try again", 403));
     }
 
-    console.log("result", JSON.stringify(req.file));
+    // console.log("result", JSON.stringify(req.file));
 
     if (req.file) {
       try {
         const result = await cloudinary.v2.uploader.upload(req.file.path, {
           folder: "new",
         });
-        // console.log(result, 'hello')
 
         if (result) {
           store.galleryImages.public_id = result.public_id;

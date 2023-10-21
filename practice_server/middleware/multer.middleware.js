@@ -1,5 +1,5 @@
 import path from "path";
-
+// import fs from 'fs/promises'
 import multer from "multer";
 
 const upload = multer({
@@ -11,7 +11,7 @@ const upload = multer({
       cb(null, file.originalname);
     },
   }),
-  fileFilter: (_req, file, cb) => {
+    fileFilter: (_req, file, cb) => {
     let ext = path.extname(file.originalname);
 
     if (
@@ -28,5 +28,6 @@ const upload = multer({
     cb(null, true);
   },
 });
+// const
 
 export default upload;
