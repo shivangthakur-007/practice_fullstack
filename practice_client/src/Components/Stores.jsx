@@ -9,7 +9,7 @@ const img =
 function StoreMenu() {
   const dispatch= useDispatch();
   const btn = useSelector((state)=> state?.stores?.data);
-  console.log(btn?.name)
+  console.log(btn)
   // const btn = [
   //   { name: "AIRIA MALL STORE"},
   //   { name: "AKSHARDHAM STORE"},
