@@ -73,4 +73,6 @@ It is well-tested and reliable.
 If you are developing Node.js applications that need to parse request bodies, I recommend using body-parser. It is a powerful and easy-to-use middleware that can save you a lot of time and effort.
 41
 
-= You can also use the fetch feature to apply any of Cloudinary's image and video transformations to the delivered asset. Simply add the transformation parameters to the URL directly after the fetch prefix and before the URL of the asset.23
+- You can also use the fetch feature to apply any of Cloudinary's image and video transformations to the delivered asset. Simply add the transformation parameters to the URL directly after the fetch prefix and before the URL of the asset.
+
+- Middleware in Node.js is a function that has access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle. The next middleware function is commonly denoted by a variable named next.
