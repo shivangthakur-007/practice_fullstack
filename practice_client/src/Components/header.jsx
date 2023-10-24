@@ -9,8 +9,11 @@ import { CgProfile } from "react-icons/cg";
 import CategoryMenu from "../Components/Categorymenu";
 import BrandsMenu from "../Components/BrandsMenu";
 import StoreMenu from "../Components/Stores";
+import {useSelector} from 'react-redux';
 
 function Header() {
+  const btn = useSelector((state) => state?.store?.data);
+  console.log(btn)
   const img =
     "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
   return (
@@ -99,6 +102,7 @@ function Header() {
             <a href="/">
               <li>
                 <BsBag className="w-[40px] h-[30px] hover:text-yellow-500" />
+                <button>{btn?.name}</button>
                 {/* <div className="">
                   <button className="flex bg-tranparent  items-center justify-center  border-[2px] border-slate-400 rounded-3xl w-[30px] h-[28px] cursor-pointer hover:border-blue-800 ">
                     <span className="text-xl hover:text-slate-500 text-blue-600">

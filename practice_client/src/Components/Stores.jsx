@@ -7,9 +7,9 @@ import {Link} from 'react-router-dom';
 const img =
   "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";
 function StoreMenu() {
-  const dispatch= useDispatch();
-  const btn = useSelector((state)=> state?.stores?.data);
-  console.log(btn)
+  // const dispatch= useDispatch();
+  // const btn = useSelector((state)=> state?.store?.data);
+  // console.log(btn);
   // const btn = [
   //   { name: "AIRIA MALL STORE"},
   //   { name: "AKSHARDHAM STORE"},
@@ -50,8 +50,8 @@ function StoreMenu() {
                     </Link>
                   </ul>
                 </button>
-              ))} */}
-              <li>{btn?.name}</li>
+              ))}  */}
+              {/* <li>{btn?.name}</li> */}
             </div>
           </div>
         </Popover.Panel>
