@@ -12,7 +12,7 @@ import StoreMenu from "../Components/Stores";
 import {useSelector} from 'react-redux';
 
 function Header() {
-  const btn = useSelector((state) => state?.store?.data);
+  const btn = useSelector((state) => state?.stores?.data);
   console.log(btn)
   const img =
     "https://www.combonation.in/storage/9453/63ca5f25af222_Xmas_logo_theme.png";

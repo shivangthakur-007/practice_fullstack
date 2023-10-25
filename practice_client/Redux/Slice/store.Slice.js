@@ -1,10 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axiosInstance from "../../helpers/axios";
 import toast from "react-hot-toast";
+import AxiosInstance from "../../helpers/axios";
 
+const initialState={
+    data: localStorage.getItem('data') != undefined ? JSON.parse(localStorage.getItem('data')): {'signature': 'adarsh'},
+}
 export const getstoreCard= createAsyncThunk('/store/getstore', async()=>{
     try {
-        const res = axiosInstance.get('/store/get')
+        const res = AxiosInstance.get('store/get')
         // toast.promise(res, {
         //     loading: 'Wait ! Logging in store',
         //     success: (data)=>{
@@ -17,10 +20,9 @@ export const getstoreCard= createAsyncThunk('/store/getstore', async()=>{
         toast.e(e?.response?.data?.message);
     }
 });
-
 const storeSlice= createSlice({
-    name: 'store',
-    initialState: [],
+    name: 'stores',
+    initialState,
     reducers: {},
     extraReducers: (builder)=>{
         builder
