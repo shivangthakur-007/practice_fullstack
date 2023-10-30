@@ -1,11 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit';
-import storeSliceReducer from './Slice/store.Slice';
+import storeSliceReducer from './Slice/storeSlice';
 
-const store = configureStore({
-    reducer: {
-        stores: storeSliceReducer,
-    },
-    devTools: true,
+const store= configureStore({
+    reducer: storeSliceReducer,
+    devtools: true,
 })
 
-export default  store;
+export default store;
