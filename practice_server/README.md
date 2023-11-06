@@ -91,3 +91,16 @@ A running container uses an isolated filesystem. This isolated filesystem is pro
 
 - Containerize an application
 For the rest of this guide, you'll be working with a simple todo list manager that runs on Node.js. If you're not familiar with Node.js, don't worry. This guide doesn't require any prior experience with JavaScript.
+
+
+- asynchronous function
+=> 
+The word "asynchronous" is derived from the Greek words "a-" (meaning "not") and "synchronos" (meaning "at the same time"). Therefore, "asynchronous" means "not at the same time" or "not coordinated in time."
+
+In general, asynchronous is used to describe events or processes that occur at different times or at different speeds. For example, two cars traveling at different speeds are asynchronous, as is a person walking and a person running. In the context of communication, asynchronous means that the sender and receiver are not communicating in real time. For example, email is an asynchronous form of communication, while a phone call is a synchronous form of communication.
+
+Here are some examples of how the word "asynchronous" is used in a sentence:
+
+"The two databases are asynchronous, which means that they do not update each other in real time."
+"The students in the online class completed the assignments asynchronously, which means that they could work on them at their own pace."
+"The doctor and patient communicated asynchronously via email, which allowed the patient to ask questions at their own convenience."
