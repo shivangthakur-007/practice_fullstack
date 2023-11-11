@@ -104,3 +104,6 @@ Here are some examples of how the word "asynchronous" is used in a sentence:
 "The two databases are asynchronous, which means that they do not update each other in real time."
 "The students in the online class completed the assignments asynchronously, which means that they could work on them at their own pace."
 "The doctor and patient communicated asynchronously via email, which allowed the patient to ask questions at their own convenience."
+
+- Adding  interactivity 
+- Some things on the screen update in response to user input. For example, clicking an image gallery switches the active image. In React, data that changes over time is called state. You can add state to any component, and update it as needed. In this chapter, you’ll learn how to write components that handle interactions, update their state, and display different output over time.
