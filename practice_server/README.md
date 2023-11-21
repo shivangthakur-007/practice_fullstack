@@ -107,3 +107,35 @@ Here are some examples of how the word "asynchronous" is used in a sentence:
 
 - Adding  interactivity 
 - Some things on the screen update in response to user input. For example, clicking an image gallery switches the active image. In React, data that changes over time is called state. You can add state to any component, and update it as needed. In this chapter, you’ll learn how to write components that handle interactions, update their state, and display different output over time.
+
+- State as a snapshot
+export default function App(){
+  const [to, setto]= useState('Alice');
+  const [message, setmessage]= useState('hello hi');
+
+  function handleSubmit(e){
+    e.preventDefault();
+    setTimeout(()=>{
+    alert(`you said ${message} to ${to}`); 
+    }, 1000)
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        To: {' '}
+        <select
+          value={to}
+          onChange={e=>setto(e.target.value)}>
+          <option value="Alice">Alice</option>
+          <option value="Bob">Bob</option>
+        </select>
+      </label>
+    <textarea 
+      placeholder="message"
+      value={message}
+      onChange={e=>setmessage(e.target.value)}/>
+      <button type="submit">send</button>
+    </form>
+  )
+};
+
